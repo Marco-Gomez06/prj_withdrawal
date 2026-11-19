@@ -1,0 +1,38 @@
+[
+  {
+    "fecha": "2026-11-18 20:02:11",
+    "titular": "Marco Gomez",
+    "tipo": "ABONO",
+    "monto": 100,
+    "estado": "EXITO",
+    "detalle": "Abono procesado correctamente",
+    "saldo_final": 300
+  },
+  {
+    "fecha": "2026-11-18 20:02:17",
+    "titular": "Marco Gomez",
+    "tipo": "RETIRO",
+    "monto": 50,
+    "estado": "EXITO",
+    "detalle": "Retiro procesado correctamente",
+    "saldo_final": 250
+  },
+  {
+    "fecha": "2026-11-18 20:02:23",
+    "titular": "Marco Gomez",
+    "tipo": "RETIRO",
+    "monto": 500,
+    "estado": "FALLO",
+    "detalle": "Saldo insuficiente",
+    "saldo_final": 250
+  },
+  {
+    "fecha": "2026-11-18 20:02:33",
+    "titular": "Marco Gomez",
+    "tipo": "RETIRO",
+    "monto": -20,
+    "estado": "ERROR",
+    "detalle": "No se pueden retirar cantidades negativas",
+    "saldo_final": 250
+  }
+]

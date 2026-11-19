@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Web - prj_withdrawal (UNI FIIS)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Servicio ATM Web — prj_withdrawal</h1>
+    <p>SW608 Lenguaje de Dominio Específico | UNI - FIIS</p>
+  </header>
+
+  <main class="container">
+    <section class="card saldo-card">
+      <div>
+        <span class="label">Titular de la Cuenta</span>
+        <h2 id="titular">Cargando...</h2>
+      </div>
+      <div class="saldo-box">
+        <span class="label">Saldo Disponible</span>
+        <p id="saldo" class="saldo-valor">S/ 0.00</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Operaciones Bancarias</h3>
+      <div class="form-row">
+        <input type="number" id="monto" step="0.01" placeholder="Ingrese monto (ej. 50.00)">
+        <button id="btn-retirar" class="btn btn-retiro">Retirar Efectivo</button>
+        <button id="btn-abonar" class="btn btn-abono">Abonar Efectivo</button>
+        <button id="btn-reiniciar" class="btn btn-sec">Reiniciar Cuenta</button>
+      </div>
+      <div id="alerta" class="alerta oculto"></div>
+    </section>
+
+    <section class="card">
+      <h3>Historial de Auditoría (US-04: Integridad de Transacción)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha y Hora</th>
+              <th>Tipo</th>
+              <th>Monto</th>
+              <th>Estado</th>
+              <th>Detalle</th>
+              <th>Saldo Final</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-historial">
+            <tr><td colspan="6" class="vacio">Sin transacciones registradas aún.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Registro en Formato JSON (<code>transacciones.json</code>)</h3>
+      <pre id="json-viewer">[]</pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
